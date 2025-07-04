@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTrigger</title>
+    <link rel="stylesheet" href="fun.css"> 
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="fun.js" defer></script>
+</body>
+</head>
+  
+    <title></title>
+    <meta content="">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(function() {
+    $("#visible").click(function() {
+        $('#invisible').toggleClass("show");
+      });  
+    });
+    </script>
+    <style>
+      .hide{display:none;}
+      .show{display:block;}
+    </style>
+  </head>
+  
+
+
+
+
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: -65rem;
+  left: -1rem;
+
+  
+  transform: translate(15%, -300%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #706b6b;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 90px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+ 
+                     <div class="grid padded padded-t-0">
+                       
+                         <div class="col-3">
+                            <div class="bg-image bg-image-4 position-4 square shape-round-corner"> </div>
+                            <div class="container">
+                                <button class="btn">+<body>
+                                    <p id="visible">Click Here</p>
+                                    <p id="invisible" class="hide">See me now!</p></button> 
+                              </div>
+                              
