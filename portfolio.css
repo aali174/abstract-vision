@@ -1,0 +1,213 @@
+body,
+html {
+  height: 100%;
+  background: #110101;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  
+  .slider {
+    width: 100vw;
+    height: 100vw;
+    z-index: 2;
+    filter:brightness(90%); 
+    
+    * {
+      outline: none;
+    }
+    
+    .item {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+      border: none;
+            animation: exampl4 2s linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+      
+@keyframes exampl1 {
+  0%   {filter: brightness(100%);}
+  2%  {filter: invert(100%);}
+  4% {filter: brightness(100%);}
+  6%   {filter: invert(100%);}
+  8%  {filter: brightness(100%);}
+  10%   {filter: invert(100%);}
+  12%   {filter: brightness(100%);}
+  14%  {filter: invert(100%);}
+  16% {filter: brightness(100%);}
+  18%   {filter: invert(100%);}
+  20%   {filter: brightness(100%);}
+  22%  {filter: invert(100%);}
+  24% {filter: brightness(100%);}
+  26%   {filter: invert(100%);}
+  28%   {filter: brightness(100%);}
+  30%  {filter: invert(100%);}
+  32%  {filter: contrast(70%);}
+  100%  {filter: contrast(120%);}
+}
+      
+@keyframes exampl2 {
+  0%   {filter: brightness(100%);}
+  2%  {filter: invert(100%);}
+  4% {filter: brightness(100%);}
+  6%   {filter: invert(100%);}
+  8%  {filter: brightness(100%);}
+  10%   {filter: invert(100%);}
+  12%   {filter: brightness(100%);}
+  14%  {filter: invert(100%);}
+  16% {filter: brightness(100%);}
+  18%   {filter: invert(100%);}
+  20%   {filter: brightness(100%);}
+  22%  {filter: invert(100%);}
+  24% {filter: brightness(100%);}
+  26%   {filter: invert(100%);}
+  28%  {filter: brightness(100%);}
+  30%  {filter: brightness(100%);}
+  50% {filter: hue-rotate(90deg);}
+  70% {filter: hue-rotate(180deg);}
+  90% {filter: hue-rotate(270deg);}
+}
+  
+      @keyframes exampl3 {
+  0%   {filter: invert(0%);}
+  15%   {filter: invert(0%);}
+  85%  {filter: invert(100%);}
+  100%  {filter: invert(100%);}
+        }
+      
+      @keyframes exampl4 {
+  0%   {filter: brightness(100%);}
+  20%  {filter: invert(100%);}
+  40% {filter: brightness(100%);}
+  60%   {filter: invert(100%);}
+  80%  {filter: brightness(100%);}
+  100%  {filter: invert(100%);}
+}
+      
+      .text {
+        display: none;
+      }
+      
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  
+  .slick-dots {
+    position: fixed;
+    z-index: 100;
+    width: 40px;
+    height: auto;
+    bottom: auto;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    left: auto;
+    color: #fff;
+    display: block;
+    
+    li {
+      display: block;
+      width: 100%;
+      height: auto;
+      
+      & button {
+        position: relative;
+        width: 20px;
+        height: 15px;
+        text-align: center;
+        
+        &:before {
+          content: '';
+          background: #fff;
+          color: #fff;
+          height: 2px;
+          width: 20px;
+          border-radius: 0;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          left: auto;
+          transform: translateY(-50%);
+          transition: all .3s ease-in-out;
+          opacity: 0.6;
+        }
+      }
+      
+      &.slick-active {
+        button {
+          &:before {
+            width: 40px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  &.slideshow-right {
+    left: 0;
+    z-index: 1;
+    width: 50vw;
+    pointer-events: none;
+    
+    .slider {
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+.slideshow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  font-size: 80px;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  line-height: 0.8;
+  
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+  
+}
+
+
+.the-most {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  max-width: 200px;
+  padding: 10px;
+  
+  img {
+    max-widtht: 100%;
+  }
+}
