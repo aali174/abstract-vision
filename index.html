@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abstract Verbal Vision</title>
+		<link rel="stylesheet" href="yay.css" />
+			  <style>
+				/* Style the preloader container */
+				#preloader {
+				  position: fixed;
+				  top: 0;
+				  left: 0;
+				  width: 100%;
+				  height: 100%;
+				  background-color: #6d4f34; 
+				  display: flex;
+				  align-items: center;
+				  justify-content: center;
+				  font-family: Arial, sans-serif;
+				  font-size: 48px;
+				  color: #333;
+				}
+			  </style>
+			</head>
+			<body>
+			  <!-- Create a div element for the preloader -->
+			  <div id="preloader">
+				<!-- Create a span element for the number counter -->
+				<span id="counter">0</span>
+				<!-- Create a span element for the percentage sign -->
+				<span>%</span>
+			  </div>
+			  <!-- Load the jQuery library -->
+			  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			  <script>
+				// Declare a variable for the counter value
+				var count = 0;
+				// Declare a variable for the counter interval
+				var counter;
+				// Declare a function to start the counter
+				function startCounter() {
+				  // Set the counter interval to run every 50 milliseconds
+				  counter = setInterval(function() {
+					// Increment the count by 1
+					count++;
+					// Update the counter span with the count value
+					$("#counter").text(count);
+					// Check if the count reaches 100
+					if (count == 100) {
+					  // Clear the counter interval
+					  clearInterval(counter);
+					  // Fade out the preloader div
+					  $("#preloader").fadeOut(100);
+					}
+				  }, .25);
+				}
+				// Call the startCounter function when the window is loaded
+				$(window).on("load", function() {
+				  startCounter();
+				});
+			  </script>
+			</body>
+			</html>
+
+
+			<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AVV</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar">
+				<div class="logo navbar-item">
+				</div>
+					<ul class="menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="gallery.html">Portfolio</a></li>
+						
+					  </ul>
+					  
+				</div>
+			</div>
+			<div class="centerbar">
+				<div class="block-1 centerbar-item">
+					<div class="block-1-container">
+						<span>Abstract Verbal Vision</span>
+					</div>
+				</div>
+				<div class="block-2 centerbar-item">
+					<div class="block-2-container">
+					</div>
+				</div>
+			</div>
+
+			<div class="header">
+				<div class="header-container">
+					<div class="header-item">A</div>
+					<div class="header-item">  R</div>
+					<div class="header-item"> L </div>
+
+
+				</div>
+			</div>
+			<div class="images">
+				<div class="img img-one"></div>
+				<div class="img img-two"></div>
+				<div class="img img-three"></div>
+			</div>
+			<div class="bottombar">
+				<div class="year bottombar-item">2017-</div>
+			</div>
+		</div>
+		<script>
+			TweenMax.staggerFrom(
+				".navbar > div",
+				0.8,
+				{
+					y: "60",
+					ease: Power3.easeInOut,
+					opacity: "0",
+					delay: 1,
+				},
+				0.1
+			);
+			TweenMax.staggerFrom(
+				".centerbar > div",
+				0.8,
+				{
+					x: "-40",
+					ease: Power3.easeInOut,
+					opacity: "0",
+					delay: 1.2,
+				},
+				0.1
+			);
+			TweenMax.staggerFrom(
+				".bottombar > div",
+				0.8,
+				{
+					y: "60",
+					ease: Power3.easeInOut,
+					opacity: "0",
+					delay: 1,
+				},
+				0.1
+			);
+			TweenMax.staggerFrom(
+				".images > div",
+				0.8,
+				{
+					x: "-200",
+					ease: Power2.easeInOut,
+					opacity: "0",
+					delay: 1.2,
+				},
+				0.16
+			);
+
+			TweenMax.staggerFrom(
+				".header-container > div",
+				3,
+				{
+					y: "500",
+					ease: Elastic.easeOut.config(2, 0.4),
+					delay: 2,
+				},
+				0.2
+			);
+		</script>
+	</body>
+</html>
+
