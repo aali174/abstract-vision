@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --slide-spacer: 40px;
+    --slide-width: clamp(200px, 25vw, 400px);
+    --slide-count: 9;
+    --time-per-slide: 14s;
+  }
+  
+  body {
+    background: hsl(200, 60%, 80%);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slider-group {
+    --slider-bg: hsl(200, 60%, 80%);
+    background: var(--slider-bg);
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: clamp(20px, 10%, 200px);
+      height: 100%;
+      background: linear-gradient(to right, var(--slider-bg) 5%, hsla(200, 50%, 80%, 0));
+      z-index: 8;
+    }
+  
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: clamp(20px, 10%, 200px);
+      height: 100%;
+      background: linear-gradient(to left, var(--slider-bg) 5%, hsla(200, 50%, 80%, 0));
+      z-index: 8;
+    }
+  }
+  
+  .slider {
+    overflow: hidden;
+    overflow: clip;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .slide-track {
+    display: flex;
+    transform: translateX(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    --slide-total-width: calc(var(--slide-width) + var(--slide-spacer));
+    --slide-duration: calc(var(--slide-count) * var(--time-per-slide, 10s));
+  }
+  
+  // Animation
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(var(--slide-total-width) * -9));
+    }
+  }
+  
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(calc(var(--slide-total-width) * -9));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-track {
+    animation: scroll var(--slide-duration, 25s) linear infinite both;
+  }
+  
+  .reverse .slide-track {
+    animation: scroll-reverse var(--slide-duration, 25s) linear infinite both;
+  }
+  
+  .slide-track:hover, .slider-group.paused .slide-track {
+    animation-play-state: paused;
+  }
+  
+  .slide {
+    aspect-ratio: 2/1;
+    background-color: white;
+    border-radius: 18px;
+    margin-right: var(--slide-spacer);
+    min-height: 150px;
+    min-width: var(--slide-width);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    position: relative;
+    transform: scale(.99);
+    -webkit-backface-visibility: hidden;
+    transition: transform .2s;
+  }
+  
+  .slide:hover {
+    transform: scale(1.001);
+  }
+  
+  /* demo cat pics */
+  
+  .kitty {
+    display: block;
+    width: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .kitty img {
+    width: 32px;
+    width: clamp(32px, 8vw, 40px);
+    height: auto;
+    border-radius: 100%;
+    transform: scale(2);
+  }
+  
+  .btn-wrapper {
+    margin: auto;
+  }
+
+
+  
+  .scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  
+  }
+  
+  .flex-item {
+    flex: 0 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: 0px solid white;
+    height: 20vw;
+    width: 45vw;
+    margin: 10px;
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    .flex-item {
+      width: 90vw; 
+      margin: 3px;
+      height: 45vw;
+    }
+  }
+  
+  img {
+    height: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 26px;
+    border-radius: 4px;
+  }
+
+
+  .overlayone{
+    width: 680px;
+    height: 520px;
+    display: inline-block;
+    position: relative;
+  }
+  .overlayinn {
+    background-color: rgba(0, 182, 158, 0.7);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 70px;
+    transition: opacity .5s;
+  }
+  .overlayinn:hover {
+    opacity: 1;
+    transition: opacity .5s;
+  }  
+
+  
+  
