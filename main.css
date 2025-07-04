@@ -1,0 +1,132 @@
+*/slider navigation*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrapper {
+  background: url("abstract-1501710_1920.jpg") no-repeat center;
+  background-size: 100rem;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+.content{
+  text-align: center;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 2px;
+}
+
+
+.share li:hover:before{
+  opacity: 1;
+}
+
+
+
+/* Explanation in JS tab */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body {
+  margin: 0px;
+}
+
+#container {
+  /* Center the text in the viewport. */
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+  
+  /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+  filter: url(#threshold) blur(0px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 80pt;
+  
+  text-align: center;
+  
+  user-select: none;
+}
+
+
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+----/button/---- 
+{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: relative;
+  top: 100%;
+  left: 45rem;
+  transform: translate(-1%, 821%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: rgb(71, 3, 3);
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: rgb(69, 12, 12);
+}
+
